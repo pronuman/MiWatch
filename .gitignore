@@ -1,0 +1,52 @@
+
+.gitignore
+tsconfig.tsbuildinfo
+private/
+.replit
+replit.nix
+
+
+# --- QUARTZ & NODE SPECIFIC ---
+# Папка со всеми библиотеками (самая тяжелая, качается через npm install)
+node_modules/
+.npm/
+
+# Папка локальной сборки (создается автоматически при npx quartz build)
+# Её не нужно пушить, так как GitHub собрать сайт сам через Actions
+public/
+dist/
+
+# Кэш Quartz (ускоряет локальную сборку, на Гитхабе не нужен)
+.quartz-cache/
+
+# --- OBSIDIAN & EDITORS ---
+# Служебная папка Obsidian (там лежат настройки темы, плагинов и горячих клавиш)
+# Если хочешь, чтобы настройки Obsidian синхронизировались, удали строку ниже
+.obsidian/
+
+# Настройки VS Code
+.vscode/
+.idea/
+
+# --- SYSTEM FILES ---
+# Windows файлы (эскизы картинок)
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Mac файлы
+.DS_Store
+
+# --- LOGS ---
+# Логи ошибок npm
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- MISC ---
+# Временные файлы и файлы настроек окружения
+.env
+.env.local
+.node-version
+.npmrc
