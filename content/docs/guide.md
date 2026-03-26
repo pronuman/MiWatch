@@ -1,6 +1,5 @@
 ---
-Titel: dfgdfgsdfggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggsdfsdf
----
+Titel: dfgdfgsdfggggggggggg
 
 # Рукводство
 
