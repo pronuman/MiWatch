@@ -41,3 +41,30 @@
     transform: rotate(360deg);
   }
 }
+
+
+.page-title {
+  // Оранжевая кнопка Xiaomi
+  background-color: #ff6600; // Фирменный оранжевый Xiaomi
+  padding: 8px 15px;         // Отступы
+  border-radius: 12px;        // Скруглил углы
+  //display: inline-flex;      /* Изменил на inline-flex для центровки */
+  align-items: center;       /* Центровка по вертикали */
+  justify-content: center;   /* Центровка по горизонтали */   
+  line-height: 1;            /* Убираем лишнюю высоту строки */
+
+  a { 
+    color: white !important;         
+    text-decoration: none !important; 
+    font-size: 1.2rem;               
+    font-weight: 700;                
+    display: block;                  /* Чтобы ссылка занимала всё место внутри */
+    margin: 0;                       /* Обнуляем внешние отступы ссылки */
+    padding: 0;                      /* Обнуляем внутренние отступы ссылки */
+    text-align: center;              /* Дополнительная страховка */
+
+    &:hover {
+      color: #eeeeee !important;      
+    }
+  }
+}

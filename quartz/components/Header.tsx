@@ -5,8 +5,8 @@ const Header: QuartzComponent = ({ children }: QuartzComponentProps) => {
     <header>
       {/* Твоя кастомная часть шапки */}
       <div class="header-title">
-        <a href="/"><h1>MiWatch-Wiki</h1></a>
-        <p>Техническая энциклопедия устройств Xiaomi</p>
+        <a href="/"><h1>Wiki</h1></a>
+        <p>Техническая энциклопедия умных часов Xiaomi</p>
       </div>
 
       {/* Стандартные компоненты: Поиск и переключатель темы */}
