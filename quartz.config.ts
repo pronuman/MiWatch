@@ -11,7 +11,7 @@ const config: QuartzConfig = {
     pageTitle: "Mi Watch",
     pageTitleSuffix: "",
     enableSPA: true,
-    enablePopovers: true,
+    enablePopovers: false,
     analytics: {
       provider: "plausible",
     },

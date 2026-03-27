@@ -21,9 +21,9 @@ export const defaultContentPageLayout: PageLayout = {
       component: Component.Breadcrumbs(),
       condition: (page) => page.fileData.slug !== "index",
     }),
-    Component.ArticleTitle(),
-    Component.ContentMeta(),
-    Component.TagList(),
+    // Component.ArticleTitle(),  <-- Верхняя часть насзвания
+ // Component.ContentMeta(),
+    // Component.TagList(),
   ],
   left: [
     Component.PageTitle(),
@@ -41,7 +41,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Explorer(),
   ],
   right: [
-    Component.Graph(),
+    // Component.Graph(),<--- Отключает график
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
@@ -49,7 +49,11 @@ export const defaultContentPageLayout: PageLayout = {
 
 // components for pages that display lists of pages  (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
-  beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
+  beforeBody: [
+    // Component.Breadcrumbs(),   // <-- Раскомментируй, если хочешь оставить путь "Home > Watch"
+    // Component.ArticleTitle(),   // <-- ЭТО УБИРАЕТ СЛОВО "ПАПКА" И НАЗВАНИЕ
+    // Component.ContentMeta()      // <-- ЭТО УБИРАЕТ ДАТЫ И ВРЕМЯ ЧТЕНИЯ
+  ],
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
