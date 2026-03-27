@@ -2,7 +2,7 @@
 
 .page-title { // Оранжевая кнопка Xiaomi
   background-color: #ff6600; // Фирменный оранжевый Xiaomi
-  padding: 8px 15px;         // Отступы
+  padding: 6px 15px;         // Отступы
   border-radius: 12px;        // Скруглил углы
   align-items: center;       /* Центровка по вертикали */
   justify-content: center;   /* Центровка по горизонтали */   
@@ -24,17 +24,31 @@
   }
 }
 
-/* Если она находится внутри flex-компонента в сайдбаре */
-.sidebar.left .flex-component button:has(.lucide-book-open),
-.sidebar.left .flex-component button:has(.lucide-book) {
-  display: none !important;
-}
-
-/* Отступ для иконки переключения темы (солнце) */
-.darkmode {
+.darkmode {/* Отступ для иконки переключения темы (солнце) */
   margin-right: 20px; /* Регулируй это число, чтобы отодвинуть от края */
   
   @media all and (max-width: 800px) {
     margin-right: 15px; /* Отступ специально для мобильной версии */
+  }
+}
+
+/* --- Настройка Поиска --- */
+.search {
+  // 1. Сама кнопка поиска (то, что мы видим в шапке)
+  & > button {
+    border-radius: 12px !important;    // Скругление 12px (как у логотипа)
+    height: 36px;                       // Фиксированная высота
+    padding: 0 16px !important;         // Отступы внутри
+    background-color: var(--lightgray); // Светло-серый фон
+    border: 1px solid var(--gray);       // Тонкая рамка
+    display: flex;
+    align-items: center;
+    gap: 8px;                           // Расстояние между лупой и текстом
+    transition: all 0.2s ease;
+
+    &:hover {
+      border-color: #ff6600;            // Оранжевая рамка при наведении
+      background-color: var(--gray);    // Чуть темнее при наведении
+    }
   }
 }
