@@ -1,54 +1,9 @@
 @use "./base.scss";
 
-/* From Uiverse.io by angelo2004-mateus */ 
-.loader {
-  width: 4rem;
-  height: 4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  border-radius: 50%;
- box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-}
-
-.loader:before {
-  height: 1rem;
-  width: 1rem;
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-  background: #ececec;
-  border-radius: 50%;
-  border: 2px solid #e2e1e1;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-}
-
-.loader span {
-  width: 80%;
-  height: 80%;
-  border-radius: 50%;
-  background: linear-gradient(to bottom, rgb(89, 92, 252), rgb(226, 57, 241));
-  animation: rotate 1s infinite linear;
-}
-
-@keyframes rotate {
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-
-.page-title {
-  // Оранжевая кнопка Xiaomi
+.page-title { // Оранжевая кнопка Xiaomi
   background-color: #ff6600; // Фирменный оранжевый Xiaomi
   padding: 8px 15px;         // Отступы
   border-radius: 12px;        // Скруглил углы
-  //display: inline-flex;      /* Изменил на inline-flex для центровки */
   align-items: center;       /* Центровка по вертикали */
   justify-content: center;   /* Центровка по горизонтали */   
   line-height: 1;            /* Убираем лишнюю высоту строки */
@@ -66,5 +21,20 @@
     &:hover {
       color: #eeeeee !important;      
     }
+  }
+}
+
+/* Если она находится внутри flex-компонента в сайдбаре */
+.sidebar.left .flex-component button:has(.lucide-book-open),
+.sidebar.left .flex-component button:has(.lucide-book) {
+  display: none !important;
+}
+
+/* Отступ для иконки переключения темы (солнце) */
+.darkmode {
+  margin-right: 20px; /* Регулируй это число, чтобы отодвинуть от края */
+  
+  @media all and (max-width: 800px) {
+    margin-right: 15px; /* Отступ специально для мобильной версии */
   }
 }
