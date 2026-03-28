@@ -27,8 +27,8 @@
   margin-right: 0px; /* Регулируй это число, чтобы отодвинуть от края */
   
   @media all and (max-width: 800px) {
-    margin-right: 10px; /* Отступ специально для мобильной версии */
-	margin-top: 5px
+    margin-right: 6px; /* Отступ специально для мобильной версии */
+	margin-top: 4px
   }
 }
 
@@ -38,7 +38,7 @@
   & > button {
     border-radius: 10px !important;    // Скругление 12px (как у логотипа)
     
-    padding: 0 5px !important;         // Отступы внутри
+    padding: 0 8px !important;         // Отступы внутри
     background-color: var(--lightgray); // Светло-серый фон
     border: 1px solid var(--gray);       // Тонкая рамка
     display: flex;
