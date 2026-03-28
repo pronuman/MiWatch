@@ -2,7 +2,7 @@
 
 .page-title { // Оранжевая кнопка Xiaomi
   background-color: #ff6600; // Фирменный оранжевый Xiaomi
-  padding: 6px 15px;         // Отступы
+  padding: 6px 10px;         // Отступы
   border-radius: 12px;        // Скруглил углы
   align-items: center;       /* Центровка по вертикали */
   justify-content: center;   /* Центровка по горизонтали */   
@@ -11,7 +11,7 @@
   a { 
     color: white !important;         
     text-decoration: none !important; 
-    font-size: 1.2rem;               
+    font-size: 1.0rem;               
     font-weight: 700;                
     display: block;                  /* Чтобы ссылка занимала всё место внутри */
     margin: 0;                       /* Обнуляем внешние отступы ссылки */
@@ -25,10 +25,11 @@
 }
 
 .darkmode {/* Отступ для иконки переключения темы (солнце) */
-  margin-right: 20px; /* Регулируй это число, чтобы отодвинуть от края */
+  margin-right: 0px; /* Регулируй это число, чтобы отодвинуть от края */
   
   @media all and (max-width: 800px) {
     margin-right: 15px; /* Отступ специально для мобильной версии */
+	margin-top: 2px
   }
 }
 
