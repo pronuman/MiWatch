@@ -2,8 +2,8 @@
 
 .page-title { // Оранжевая кнопка Xiaomi
   background-color: #ff6600; // Фирменный оранжевый Xiaomi
-  padding: 6px 10px;         // Отступы
-  border-radius: 12px;        // Скруглил углы
+  padding: 8px 10px;         // Отступы
+  border-radius: 10px;        // Скруглил углы
   align-items: center;       /* Центровка по вертикали */
   justify-content: center;   /* Центровка по горизонтали */   
   line-height: 1;            /* Убираем лишнюю высоту строки */
@@ -28,7 +28,7 @@
   
   @media all and (max-width: 800px) {
     margin-right: 10px; /* Отступ специально для мобильной версии */
-	margin-top: 4px
+	margin-top: 5px
   }
 }
 
@@ -36,14 +36,14 @@
 .search {
   // 1. Сама кнопка поиска (то, что мы видим в шапке)
   & > button {
-    border-radius: 12px !important;    // Скругление 12px (как у логотипа)
-    height: 36px;                       // Фиксированная высота
-    padding: 0 15px !important;         // Отступы внутри
+    border-radius: 10px !important;    // Скругление 12px (как у логотипа)
+    
+    padding: 0 5px !important;         // Отступы внутри
     background-color: var(--lightgray); // Светло-серый фон
     border: 1px solid var(--gray);       // Тонкая рамка
     display: flex;
     align-items: center;
-    gap: 8px;                           // Расстояние между лупой и текстом
+    gap: 4px;                           // Расстояние между лупой и текстом
     transition: all 0.2s ease;
 
     &:hover {
