@@ -59,17 +59,17 @@
   margin: 2rem 0;
   border: 1px solid var(--lightgray);
   border-radius: 12px;
-  overflow: hidden;
+  overflow: hidden; /* Обрезает фон шапки по радиусу углов */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 
   table {
     width: 100% !important;
     margin: 0 !important;
     border-collapse: collapse;
-    table-layout: fixed; /* Помогает строго соблюдать проценты ширины колонок */
+    /* Убираем table-layout: fixed, чтобы колонки могли гибко сжиматься */
 
     tr {
-      position: relative;
+      position: relative; /* База для кликабельности всей строки */
       
       &:hover td {
         background-color: var(--highlight);
@@ -81,13 +81,12 @@
       }
     }
 
-    /* ОБЩИЕ СТИЛИ ЯЧЕЕК (ИНТЕРВАЛЫ ДЛЯ ДЕСКТОПА) */
+    /* ОБЩИЕ СТИЛИ ЯЧЕЕК (ДЕСКТОП) */
     th, td {
       border-bottom: 1px solid var(--lightgray);
-      /* Создаем вертикальный интервал между строками */
-      padding: 2px 16px !important; 
-      /* Межстрочный интервал (если текст переносится) */
-      line-height: 1.6;               
+      padding: 6px 20px !important; /* Увеличенный вертикальный отступ (высота строк) */
+      line-height: 1.6;               /* Межстрочный интервал */
+      vertical-align: middle;        /* Центрирование текста по высоте ячейки */
     }
 
     /* Оформление заголовков (шапки) */
@@ -95,25 +94,26 @@
       background-color: var(--lightgray);
       font-weight: 600;
       color: var(--secondary);
-      /* Делаем шапку чуть выше строк контента */
-      padding-top: 14px !important;
-      padding-bottom: 14px !important;
-      vertical-align: middle;
+      padding-top: 10px !important;  /* Чуть больше высоты для шапки */
+      padding-bottom: 10px !important;
     }
 
     /* ПЕРВАЯ КОЛОНКА (Названия моделей) */
     th:first-child, td:first-child {
-      width: 70% !important;        /* Фиксируем 70% ширины */
+      width: auto !important;        /* Занимает всё доступное место, толкая вторую колонку вправо */
       text-align: left;
-      white-space: nowrap;          /* Запрет переноса на десктопе */
-      padding-right: 15px !important;
+      white-space: nowrap;           /* Запрет переноса на десктопе */
     }
 
-    /* ВТОРАЯ КОЛОНКА (Да/Нет / LUA) */
+    /* ВТОРАЯ КОЛОНКА (Данные / Разрешение) */
     th:last-child, td:last-child {
-      width: 20% !important;        /* Фиксируем 30% ширины */
-      text-align: center !important; /* Центрируем содержимое */
-      min-width: 80px;
+      /* Ширина 1% заставляет колонку сжаться до минимально необходимой и "прилипнуть" вправо */
+      width: 1% !important;          
+      white-space: nowrap;           /* Чтобы данные (px) не переносились */
+      text-align: center !important;  /* Центрируем текст внутри самой колонки */
+      padding-left: 40px !important;  /* Отступ слева создает дистанцию от первой колонки */
+      padding-right: 0px !important; /* Отступ справа для симметрии и "воздуха" */
+      min-width: 120px;              /* Минимальная ширина, чтобы колонка не была слишком узкой */
     }
 
     /* Ссылки на всю строку */
@@ -137,24 +137,29 @@
 /* АДАПТАЦИЯ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ */
 @media all and (max-width: 800px) {
   .table-os1 {
-    font-size: 0.85rem; /* Немного уменьшаем шрифт */
+    font-size: 0.9rem; /* Уменьшаем шрифт для мобилок */
 
     table {
-      /* Разрешаем перенос текста в колонках, чтобы таблица не вылезала за экран */
       th:first-child, td:first-child {
-        white-space: normal !important; 
+        white-space: normal !important; /* На мобилках разрешаем перенос длинных названий */
       }
 
       th, td {
-        /* Уменьшаем отступы на мобилках для экономии места */
-        padding: 8px 10px !important; 
-        /* Уплотняем межстрочный интервал */
-        line-height: 1.0;              
+        /* Уплотняем таблицу на мобилках */
+        padding: 8px 15px !important; 
+        line-height: 1.3;              
       }
 
       th {
-        padding-top: 10px !important;
-        padding-bottom: 10px !important;
+        padding-top: 12px !important;
+        padding-bottom: 12px !important;
+      }
+
+      th:last-child, td:last-child {
+        /* На мобилках уменьшаем боковые отступы второй колонки */
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        min-width: 0px;
       }
     }
   }
