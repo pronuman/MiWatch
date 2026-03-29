@@ -42,7 +42,6 @@
 
 |**Smart Band **|**LUA**|
 |---|---|
-|Smart Band 10 Ceramic Edition|Да|
 |Smart Band 10|Да|
 |Smart Band 9 Pro|Да|
 |Smart Band 9|Да|
@@ -56,7 +55,7 @@
 |Mi Smart Band 6|Нет|
 |Mi Smart Band 5 NFC|Нет|
 |Mi Smart Band 5|Нет|
-|Mi Smart Band 4c (Redmi Band)|Нет|
+|Mi Smart Band 4c |Нет|
 |Mi Mijia Hey+ (CN)|Нет|
 |Mi Smart Band 4 NFC (CN)|Нет|
 |Mi Smart Band 4|Нет|
